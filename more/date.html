@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date</title>
+    <script>
+        function displayDate() {
+            setInterval(displayDate, 1000);
+            var d = new Date();
+            document.getElementById("dateinfo").innerHTML = d;
+
+        }
+    </script>
+</head>
+
+<body onload="displayDate()">
+    <p id="dateinfo"></p>
+</body>
+
+</html>
