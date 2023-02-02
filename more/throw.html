@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>throw</title>
+</head>
+<script>
+    function validateAge() {
+        try {
+            var age = document.getElementById("age").value;
+            if (age == "") {
+                throw "Age can not be empty";
+            }
+            if (age < 18) {
+                throw "to young to vote.";
+            }
+
+        } catch (obj) {
+            document.getElementById("errorinfo").innerHTML = obj;
+        } finally {
+            document.getElementById("finallyinfo").innerHTML = "inside Finally";
+        }
+    }
+</script>
+
+<body>
+    Age: <input type="text" id="age" />
+    <input type="button" onclick="validateAge()" />
+    <p id="errorinfo"></p>
+    <p id="finallyinfo"></p>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Singleton Object Creation</title>
+    <script>
+        var blogpost = new function() {
+            this.title = "Ruby 0n rails";
+            this.blogpost = "Rapid web development";
+            this.displayDetails = function() {
+                document.write(this.title);
+                document.write(this.text);
+            }
+
+        }
+
+        blogpost.displayDetails();
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

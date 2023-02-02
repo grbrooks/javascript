@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>validation assignment</title>
+    <script>
+        function validate() {
+            var email = document.myform.email.value;
+            var password = document.myform.password.value;
+            if (email == "") {
+                alert("enter Email");
+            } else if (password == "") {
+                alert("enter password");
+
+            } else {
+                alert("Validation")
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <form name="myform" action="dropdown.php" onsubmit="return validate()">
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validating numbers</title>
+    <script>
+        function validate() {
+            var color = document.myform.color.value;
+            if (color == "") {
+                alert("Please select a color");
+                document.myform.color.focus();
+                return false;
+            } else {
+                alert("Validation is successful");
+                return true;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h3>Select a color</h3>
+    <form name="myform" action="dropdown.php" onsubmit="return validate()">
+        <select name="color">
+            <option value="">Select a color</option>
+            <option value="red">Red</option>
+            <option value="green">Green</option>
+            <option value="blue">Blue</option>
+        </select>
+        <input type="submit" value="submit" />
+    </form>
+</body>
+
+</html>

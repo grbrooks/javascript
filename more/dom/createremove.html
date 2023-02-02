@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom:create remove</title>
+    <script>
+        function handleRemove() {
+            var parent = document.getElementById("div1");
+            var child = document.getElementById("p2");
+            parent.removeChild(child)
+        }
+
+        function handleCreate() {
+            var parent = document.getElementById("div1");
+            var child = document.getElementById("p2");
+            var child = document.createElement("p");
+            var text = document.createTextNode("HD smart TV")
+            child.appendChild(text)
+            parent.appendChild(child)
+        }
+    </script>
+</head>
+
+<body>
+    <div id="div1">
+        <p id="p1">Laptop-£1000</p>
+        <p id="p2">Mobile phone-£300</p>
+    </div>
+    <input type="button" value="add" onclick="handleCreate()">
+    <input type="button" value="delete" onclick="handleRemove()">
+
+</body>
+
+</html>

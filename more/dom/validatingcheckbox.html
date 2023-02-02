@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>validating checkbox</title>
+    <script>
+        function validate() {
+            var valid = false;
+            if (document.getElementById("javascript").checked) {
+                valid = true;
+            } else if (document.getElementById("jquery").checked) {
+                valid = true;
+            } else if (document.getElementById("angular").checked) {
+                valid = true;
+            } else if (document.getElementById("nodejs").checked) {
+                valid = true;
+            }
+            if (valid) {
+                alert("Validation successful!")
+            } else {
+                alert("Select one technology");
+                return false;
+            }
+
+        }
+    </script>
+</head>
+
+<body>
+    <form name="myform" action="checkbox.php" onsubmit="return validate()">
+        <input type="checkbox" id="javascript" value="javascript">Javascript
+        <input type="checkbox" id="jquery" value="jquery">Jquery
+        <input type="checkbox" id="angular" value="angular">Angular
+        <input type="checkbox" id="nodejs" value="nodejs">Nodejs
+        <input type="submit" value="submit">
+    </form>
+</body>
+
+</html>
